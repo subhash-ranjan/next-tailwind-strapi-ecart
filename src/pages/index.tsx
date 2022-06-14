@@ -21,13 +21,14 @@ const Home = ({
 }
 
 export async function getStaticProps() {
-	const respCategory = await fetch(`${myConfig.API_URL}/api/bookcategories`)
+	const respCategory = await fetch(
+		`${myConfig.API_URL}/api/bookcategories?populate=*`
+	)
 	const dataCategory = await respCategory.json()
 
 	//fetch books
 	const respBooks = await fetch(`${myConfig.API_URL}/api/books`)
 	const dataBooks = await respBooks.json()
-
 	return {
 		props: {
 			dataCategory,

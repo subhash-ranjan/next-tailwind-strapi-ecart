@@ -6,6 +6,7 @@ import BannerCard from '../UI/BannerCard'
 
 const Index = ({ data }: { data: any }) => {
 	const lstCategory = data.data
+
 	let index = 0
 	return (
 		<div
