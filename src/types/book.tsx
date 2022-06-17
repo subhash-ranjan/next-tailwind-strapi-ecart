@@ -1,7 +1,14 @@
 export type CategoryType = {
 	id: number
-	title: string
-	published: string
+	attributes: {
+		title: string
+		name: string
+		published: string
+		image: string
+		books: {
+			data: BookType[]
+		}
+	}
 }
 
 export type BookType = {
@@ -14,9 +21,12 @@ export type BookType = {
 		desc: string
 		published: string
 		image: string
+		author: {
+			data: {
+				attributes: {
+					name: string
+				}
+			}
+		}
 	}
-}
-
-export type BookListType = {
-	books: BookType[]
 }

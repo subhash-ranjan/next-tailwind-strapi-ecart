@@ -3,6 +3,8 @@ import Banner from '../components/Banner'
 import Contact from '../components/Contact'
 import Books from '../components/Books'
 import { myConfig } from '../lib/config'
+import { client } from '../lib/apollo'
+import { FETCH_BOOKS, FETCH_CATEGORIES } from '../queries'
 
 const Home = ({
 	dataCategory,
@@ -13,22 +15,19 @@ const Home = ({
 }) => {
 	return (
 		<div className='h-full'>
-			<Banner data={dataCategory} />
-			<Books data={dataBooks} />
-			<Contact />
+			<Banner data={dataCategory.bookcategories.data} />
+			<Books data={dataCategory.bookcategories.data} />
 		</div>
 	)
 }
 
 export async function getStaticProps() {
-	const respCategory = await fetch(
-		`${myConfig.API_URL}/api/bookcategories?populate=*`
-	)
-	const dataCategory = await respCategory.json()
+	// const respCategory = await fetch(
+	// 	`${myConfig.API_URL}/api/bookcategories?populate=*`
+	// )
+	const { data: dataCategory } = await client.query({ query: FETCH_CATEGORIES })
+	const { data: dataBooks } = await client.query({ query: FETCH_BOOKS })
 
-	//fetch books
-	const respBooks = await fetch(`${myConfig.API_URL}/api/books`)
-	const dataBooks = await respBooks.json()
 	return {
 		props: {
 			dataCategory,

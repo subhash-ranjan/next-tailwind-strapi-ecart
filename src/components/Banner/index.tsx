@@ -3,16 +3,31 @@ import Button from '../UI/Button'
 import { ArrowDownIcon } from '@heroicons/react/solid'
 import Image from 'next/image'
 import BannerCard from '../UI/BannerCard'
+import { from } from '@apollo/client'
+import { CategoryType } from '../../types/book'
 
-const Index = ({ data }: { data: any }) => {
-	const lstCategory = data.data
-
+const Index = ({ data }: { data: CategoryType[] }) => {
+	const lstCategory = data
 	let index = 0
 	return (
 		<div
 			id='dv-home'
-			className={`bg-white  min-h-[100vh] size-full flex-col-reverse-end-center lg:flex-row-center-start px-5 py-8 lg:px-10`}>
-			<div className='h-full min-w-[40vw] w-[50%]  flex-col-center-center'></div>
+			className={`bg-slate-100  min-h-[100vh] size-full flex-col-reverse-end-center lg:flex-row-center-start px-5 py-8 lg:px-10`}>
+			<div className='h-full lg:min-h-[80vh] min-w-[40vw] w-[50%]  flex-col-center-center p-5'>
+				<span className='text-3xl text-gradient-custom mb-10'>
+					Read, discover, set goals. All in one platform.
+				</span>
+				<a href=''>
+					<Button
+						text='view all'
+						isCapital={true}
+						style={'w-48 py-4 '}
+						styleText={'text-black'}
+						isText={true}
+						showArrow={true}
+					/>
+				</a>
+			</div>
 			<div className='size-full lg:min-h-[80vh] grid-col-2 lg:flex-row-center-center'>
 				{Array.from([1, 2, 3]).map((item, index1) => {
 					return (
@@ -26,7 +41,7 @@ const Index = ({ data }: { data: any }) => {
 										: 'h-[32vmin] lg:h-[40vmin]'
 
 								const url = `/books/${lstCategory[index].attributes.image}.jpg`
-								const category = lstCategory[index].attributes.name
+								const category = lstCategory[index].attributes.title
 								index++
 								return (
 									<BannerCard
