@@ -1,11 +1,11 @@
 ## Stacks
 
-Next.Js
-GraphQl
-TailwindCSS
-ESLint
-Prettier
-Strapi headless CMS
+Next.Js  
+GraphQl  
+TailwindCSS  
+ESLint  
+Prettier  
+Strapi headless CMS  
 
 ## Getting Started
 
