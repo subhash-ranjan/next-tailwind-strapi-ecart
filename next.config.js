@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
+    reactStrictMode: false,
     images: {
-        domains: ['localhost:3000', 'yourDomainName.com'],
+        domains: ['localhost', 'polar-escarpment-13752.herokuapp.com'],
     },
 };
 
