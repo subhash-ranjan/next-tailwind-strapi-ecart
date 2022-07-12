@@ -9,6 +9,14 @@ green: #2ecc71 */
 	);
 }
 
+.bg-new {
+	clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.bg-new-1 {
+	background-image: url('/book-banner.avif');
+}
+
 .bg-secondary {
 	background-color: #1f1f20;
 }

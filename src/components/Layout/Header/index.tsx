@@ -55,11 +55,11 @@ const Index = () => {
 					</div>
 
 					<div className=' flex h-full flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
-						<Link href='/'>
+						<a href='/' className='flex-col-center-center'>
 							<div className='flex-shrink-0  cursor-pointer flex-col-center-center'>
 								<BookOpenIcon className='h-8 w-8 fill-gray-200 border-[1px] p-1' />
 							</div>
-						</Link>
+						</a>
 					</div>
 
 					<div className='flex-row-center-center absolute inset-y-0 right-0 h-full pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
