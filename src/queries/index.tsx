@@ -13,6 +13,7 @@ const FETCH_BOOKS = gql`
             pagination: { page: $page, pageSize: $pageSize }
         ) {
             data {
+                id
                 attributes {
                     title
                     imgurl
@@ -20,6 +21,7 @@ const FETCH_BOOKS = gql`
                     price
                     publish_date
                     rating
+                    slug
                     bookcategory {
                         data {
                             id
@@ -33,6 +35,17 @@ const FETCH_BOOKS = gql`
                             id
                             attributes {
                                 name
+                            }
+                        }
+                    }
+                    bookreviews {
+                        data {
+                            id
+                            attributes {
+                                review
+                                updatedAt
+                                rating
+                                username
                             }
                         }
                     }
@@ -61,6 +74,7 @@ const FETCH_CATEGORIES = gql`
                     priority
                     books {
                         data {
+                            id
                             attributes {
                                 title
                                 pages
@@ -73,6 +87,13 @@ const FETCH_CATEGORIES = gql`
                                     data {
                                         attributes {
                                             name
+                                        }
+                                    }
+                                }
+                                bookreviews {
+                                    data {
+                                        attributes {
+                                            rating
                                         }
                                     }
                                 }

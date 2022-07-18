@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 import { client, ApolloProvider } from '../lib/apollo';
 import { AppContext, AppContextProvider } from '../contexts/AppContext';
 import Layout from '../components/Layout';
-import { LoaderSquare } from '../svgs';
+import { LoaderCircle } from '../svgs';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <>
             {loading ? (
                 <div className="h-[100vh] w-[100vw] bg-slate-900 flex-row-center-center">
-                    <LoaderSquare classes="" height="120" width="120" />
+                    <LoaderCircle classes="fill-white" height="60" width="60" />
                 </div>
             ) : (
                 <ApolloProvider client={client}>

@@ -112,7 +112,7 @@ export const LoaderSquare = ({ className, height, width, viewbox }: any): any =>
             width={width}
             className={`${className} inline-block`}
         >
-            <rect fill="none" stroke="#fff" stroke-width="4" x="25" y="25" width="50" height="50">
+            <rect fill="none" stroke="#fff" strokeWidth="4" x="25" y="25" width="50" height="50">
                 <animateTransform
                     attributeName="transform"
                     dur="0.5s"

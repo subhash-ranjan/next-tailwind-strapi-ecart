@@ -1,10 +1,4 @@
-import Document, {
-    Html,
-    Head,
-    Main,
-    NextScript,
-    DocumentContext,
-} from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
 class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
@@ -18,7 +12,7 @@ class MyDocument extends Document {
             <Html className="scroll-smooth">
                 <Head>
                     <link rel="shortcut icon" href="/logo.png" />
-                    <title>Subhash - Portfolio</title>
+                    <title>E-book Cart Subhash - Portfolio</title>
                 </Head>
                 <body>
                     <Main />

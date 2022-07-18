@@ -24,6 +24,7 @@ export async function getStaticProps() {
     const { data: dataCategory } = await client.query({
         query: FETCH_CATEGORIES,
     });
+
     // const { data: dataBooks } = await client.query({ query: FETCH_BOOKS });
     return {
         props: {

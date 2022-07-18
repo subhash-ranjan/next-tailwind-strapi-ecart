@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { CheckCircleIcon } from '@heroicons/react/solid';
+import { CheckCircleIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import Button from '../UI/Button';
 import Image from 'next/image';
 import PageHeader from '../UI/PageHeader';
@@ -38,14 +38,20 @@ const Index = ({ data }: { data: CategoryType[] }) => {
             />
 
             <div className="size-full grid-col-2 lg:flex-row-center-center">
-                <div className="w-full lg:w-1/2 grid grid-cols-3 p-14">
+                <div className="w-full lg:w-1/2 grid grid-cols-3 gap-2 px-[5px] lg:p-14 mb-8 lg:mb-0">
                     {data.map((item, index1) => {
                         return (
                             <Button
+                                key={index1}
                                 text={item.attributes.name}
                                 href={`/books?cat=${item.id}`}
                                 isDark={false}
-                                style="m-1 whitespace-nowrap overflow-hidden"
+                                style=" whitespace-nowrap overflow-hidden !bg-transparent 
+                                !border-[1.5px] border-gray-300 hover:!bg-gray-200 
+                                !w-full h-[40px] !px-[5px]"
+                                iconPosition="right"
+                                styleText="text-gray-600 !text-[.5rem]  md:!text-[.65rem] "
+                                icon={<ChevronRightIcon className={`h-6 w-h-6 fill-gray-600`} />}
                             />
                         );
                     })}

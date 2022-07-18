@@ -1,7 +1,7 @@
 ## Stacks
 
 Next.Js  
-GraphQl  
+GraphQL  
 TailwindCSS  
 ESLint  
 Prettier  

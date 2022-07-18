@@ -7,7 +7,7 @@ import IconLink from '../../UI/IconLink';
 
 const index = ({ category }: { category: CategoryType }) => {
     return (
-        <div className={`flex-col-center-center lg:mb-32 lg:h-full`}>
+        <div className={`flex-col-center-center mb-28 lg:mb-32 lg:h-full`}>
             <div className="w-full flex-row-between-start">
                 <PageHeader
                     header={category.attributes.name}
@@ -26,8 +26,13 @@ const index = ({ category }: { category: CategoryType }) => {
                 />
             </div>
 
-            <div className="w-full grid grid-cols-2 space-x-1 lg:space-x-0 lg:flex-row-between-center">
+            <div className="w-full gap-8 hidden lg:flex-row-between-center">
                 {category.attributes.books.data.slice(0, 5).map((item, index) => {
+                    return <BookCard key={index} book={item} />;
+                })}
+            </div>
+            <div className="w-full grid grid-cols-2 gap-8 lg:hidden">
+                {category.attributes.books.data.slice(0, 4).map((item, index) => {
                     return <BookCard key={index} book={item} />;
                 })}
             </div>

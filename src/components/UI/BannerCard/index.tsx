@@ -39,15 +39,17 @@ const index = ({
         >
             <div
                 className={`${styletextBox} absolute bg-gray-800 bg-opacity-70  left-0 bottom-0 w-full h-[100%] 
-				flex-row-center-end z-10 px-1 py-5`}
+				flex-row-center-end z-10 px-1 py-5 group`}
             >
                 <Button
                     text={text}
                     href={href}
                     isDark={false}
-                    style="m-1 whitespace-nowrap overflow-hidden"
+                    style="m-1 whitespace-nowrap overflow-hidden !bg-transparent 
+                    transition duration-500 ease-in-out group-hover:scale-[1.2]"
+                    styleText="!text-gray-200"
                     iconPosition="right"
-                    icon={<ChevronRightIcon className={`h-6 w-h-6 fill-gray-800`} />}
+                    icon={<ChevronRightIcon className={`h-6 w-h-6 fill-gray-200`} />}
                 />
             </div>
 

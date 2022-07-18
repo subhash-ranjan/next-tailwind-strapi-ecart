@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: false,
     images: {
-        domains: ['localhost', 'polar-escarpment-13752.herokuapp.com'],
+        domains: ['localhost'],
     },
 };
 

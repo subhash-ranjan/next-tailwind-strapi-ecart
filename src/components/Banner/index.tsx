@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Button from '../UI/Button';
-import { ArrowDownIcon } from '@heroicons/react/solid';
+import { ArrowDownIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import BannerCard from '../UI/BannerCard';
 import { from } from '@apollo/client';
@@ -23,15 +23,56 @@ const Index = ({ data }: { data: CategoryType[] }) => {
                         and want to read, and set your own Reading Goals — all in one app and across all your devices.
                         Your journey as a lifelong learner is as unique as you are. Let us help guide your way.
                     </p>
-                    <div className="flex justify-center lg:justify-start mt-6">
-                        <Button text="View All Books" href="/books" isDark={true} style="mr-2" />
-                        <Button text="Browse Categories" href="#dv-category" isDark={false} style="ml-2" />
+                    <div className="justify-start mt-10  hidden lg:flex ">
+                        <Button
+                            text="View All Books"
+                            href="/books"
+                            isDark={true}
+                            style="mr-2"
+                            styleText=""
+                            iconPosition="right"
+                            icon={<ChevronRightIcon className={`h-6 w-h-6 fill-gray-200`} />}
+                        />
+                        <Button
+                            text="Browse Categories"
+                            href="#dv-category"
+                            isDark={false}
+                            style="ml-2"
+                            iconPosition="right"
+                            icon={<ChevronRightIcon className={`h-6 w-h-6 fill-gray-800`} />}
+                        />
+                    </div>
+                    <div className=" flex md:mt-14 lg:hidden justify-center mt-6">
+                        <Button
+                            text="Books"
+                            href="/books"
+                            isDark={true}
+                            style="mr-2 h-[43px]"
+                            styleText=""
+                            iconPosition="right"
+                            icon={<ChevronRightIcon className={`h-6 w-h-6 fill-gray-200`} />}
+                        />
+                        <Button
+                            text="Categories"
+                            href="#dv-category"
+                            isDark={false}
+                            style="ml-2 h-[43px]"
+                            iconPosition="right"
+                            icon={<ChevronRightIcon className={`h-6 w-h-6 fill-gray-800`} />}
+                        />
                     </div>
                 </div>
             </div>
             <div className="h-52 md:h-96 lg:h-full w-full lg:w-1/2 lg:bg-new">
-                <div className="h-full object-cover bg-new-1">
-                    <div className="h-full bg-black opacity-25"></div>
+                <div className="relative h-full object-cover">
+                    <Image
+                        src="/book-banner.jpeg"
+                        alt="articles"
+                        layout="fill"
+                        blurDataURL={`/_next/image?url=/book-banner.jpeg&w=16&q=1`}
+                        placeholder="blur" // Optional blur-up while loading
+                        className="w-full object-cover"
+                    />
                 </div>
             </div>
         </div>

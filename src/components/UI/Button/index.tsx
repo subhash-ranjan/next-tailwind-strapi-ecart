@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import { ButtonType } from '../../../types';
 
 const index = (props: ButtonType) => {
     return (
-        <div>
+        <>
             {props.isDark && (
                 <a
                     className={`${props.style} 
@@ -32,7 +31,7 @@ const index = (props: ButtonType) => {
                     }}
                 >
                     {props.iconPosition == 'left' && props.icon}
-                    {props.text}
+                    <span className={`${props.styleText}`}> {props.text}</span>
                     {props.iconPosition == 'right' && props.icon}
                 </a>
             )}
@@ -64,11 +63,11 @@ const index = (props: ButtonType) => {
                     }}
                 >
                     {props.iconPosition == 'left' && props.icon}
-                    {props.text}
+                    <span className={`${props.styleText}`}> {props.text}</span>
                     {props.iconPosition == 'right' && props.icon}
                 </a>
             )}
-        </div>
+        </>
     );
 };
 

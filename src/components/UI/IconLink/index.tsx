@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import { ButtonType } from '../../../types';
 
