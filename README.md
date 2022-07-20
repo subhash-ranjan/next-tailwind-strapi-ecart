@@ -1,28 +1,27 @@
-## Stacks
+# Ebook cart example project
 
-Next.Js  
-GraphQL  
-TailwindCSS  
-ESLint  
-Prettier  
-Strapi headless CMS  
+## Stacks
+	Next.Js  
+	GraphQL  
+	TailwindCSS  
+	ESLint  
+	Prettier  
+	Strapi headless CMS  
 
 ## Getting Started
 
-First, run the development server:
+	> Backend:
+  
+	Any express,node backend server with graphql would work.(See the queries for the schema)
+	
+ 	> Frontend:
+	
+	yarn install
+	yarn dev
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Find or want report a bug?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Please submit an issue using. If you would like to submit a PR with a fix, reference the issue you created!
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Like this project?
+Feel free to clone the app and tweak for own purpose. And if possible, leave a credit :)
