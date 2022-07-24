@@ -25,3 +25,6 @@ Please submit an issue using. If you would like to submit a PR with a fix, refer
 
 ## Like this project?
 Feel free to clone the app and tweak for own purpose. And if possible, leave a shoutout :)
+
+## License
+[MIT License](https://github.com/subhash-ranjan/next-tailwind-strapi-ecart/blob/master/LICENSE)
